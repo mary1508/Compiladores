@@ -1,0 +1,31 @@
+imprimir "hola mundo"
+
+definir factorial_iterativo(n)
+ resultado = 1
+ para i en 1..n
+ resultado *= i
+ fin
+ retornar resultado
+ fin
+
+ imprimir "Ingrese un nro para calcular su factorial:"
+ num = gets.chomp.to_i
+ imprimir "El factorial de #{num} es: #{factorial_iterativo(num)}"
+
+
+definir factorial_recursivo(n)
+ si n == 0 || n == 1
+ retornar 1
+ entonces
+ retornar n * factorial_recursivo(n - 1)
+
+
+ fin
+ fin
+
+ imprimir "Ingrese otro nro para calcular su factorial de manera recursiva:"
+ num = gets.chomp.to_i
+ imprimir "El factorial de #{num} es: #{factorial_recursivo(num)}"
+ 
+ 
+ 
